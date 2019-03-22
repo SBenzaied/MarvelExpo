@@ -2,6 +2,23 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
+
+
+  state = {
+    query: '',
+    results: [],
+    totalResult:0,
+    filter:localStorage.getItem("filter") ? localStorage.getItem("filter") : 'characters',
+    clickResearch:false,
+    isLoading:true
+    
+  }
+
+
+
+
+
+
   render() {
     return (
       <View style={styles.container}>
